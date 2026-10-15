@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TravelBloom - Recommendations Application</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar (Requirement #5) -->
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-plane-departure"></i>
+      <span>TravelBloom</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="nav-btn active" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" class="nav-btn" onclick="showSection('about')">About Us</a></li>
+      <li><a href="#" class="nav-btn" onclick="showSection('contact')">Contact Us</a></li>
+    </ul>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Enter beach, temple, or country..." />
+      <button id="btnSearch"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+      <button id="btnClear"><i class="fa-solid fa-rotate-left"></i> Clear</button>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- HOME PAGE SECTION (Requirement #2) -->
+    <section id="home" class="page-section active">
+      <div class="hero-content">
+        <h1>EXPLORE <br>DREAM DESTINATIONS</h1>
+        <p class="intro-text">
+          Welcome to <strong>TravelBloom</strong>! We bring you curated travel recommendations from around the globe. Whether you crave tranquil beach coastlines, majestic historical temples, or vibrant country cityscapes, discover your next ideal holiday spot with us.
+        </p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <!-- Dynamic Recommendations Container -->
+      <div id="resultsContainer" class="results-container"></div>
+    </section>
+
+    <!-- ABOUT US PAGE SECTION (Requirement #3) -->
+    <section id="about" class="page-section">
+      <div class="about-card">
+        <h2>ABOUT US</h2>
+        <p class="about-description">
+          At TravelBloom, our mission is to empower global travelers with trustworthy, inspiring, and accessible recommendations. Founded in 2026, our team of passionate explorers works round-the-clock to highlight non-commercial cultural gems, pristine beaches, and breathtaking landmarks.
+        </p>
+        <hr />
+        <h3>Our Dedicated Team</h3>
+        <div class="team-grid">
+          <div class="team-member">
+            <i class="fa-solid fa-user-gear member-icon"></i>
+            <h4>Muhammad Rashid</h4>
+            <p>Lead Web Developer</p>
+          </div>
+          <div class="team-member">
+            <i class="fa-solid fa-compass-drafting member-icon"></i>
+            <h4>Sophia Chen</h4>
+            <p>Travel Curator</p>
+          </div>
+          <div class="team-member">
+            <i class="fa-solid fa-globe member-icon"></i>
+            <h4>Alex Rivera</h4>
+            <p>UX Designer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT US PAGE SECTION (Requirement #4) -->
+    <section id="contact" class="page-section">
+      <div class="contact-card">
+        <h2>CONTACT US</h2>
+        <p>Have questions or feedback? Drop us a message below and our team will get back to you shortly.</p>
+        <form id="contactForm" onsubmit="handleContactSubmit(event)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required placeholder="Enter your full name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="Enter your email address" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required placeholder="Type your message here..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
